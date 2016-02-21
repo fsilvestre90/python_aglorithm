@@ -24,6 +24,5 @@ def fibRecursive(a, b, fi, n):
             fi += 1
             return fibRecursive(b, a+b, fi, n)
 
-
 for i in range(20000):
     print(fibR(i))
