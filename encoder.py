@@ -1,6 +1,5 @@
 from random import randint
 
-
 def IntEncoderToString(integerToConvert, base):
     digits = "0123456789ABCDEF"
     # init a stack to store remainders
@@ -24,6 +23,6 @@ def StringDecoderToInt():
     return outputInt
 
 # test functions
-randInt = randint(0,255)
+randInt = randint(0,9999999999)
 print("Integer to convert: " + str(randInt))
 print("Converted Value: " + IntEncoderToString(randInt, 16))
