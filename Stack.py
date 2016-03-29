@@ -15,6 +15,3 @@ class Stack(object):
 
     def Push(self, element):
         self.stack.append(element)
-
-    def Count(self):
-        return len(self.stack)

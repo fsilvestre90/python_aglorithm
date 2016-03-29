@@ -1,7 +1,8 @@
 from Stack import Stack
 
-testStringValid = "(([{()}]))"
+testStringValid = "(([{()}]))(([{()}]))"
 testStringInvalid = "((){)}"
+testStringUneven = "({[])"
 
 def isCorrectCloser(peekedItem, currItem):
     if peekedItem == "(" and currItem == ")":
@@ -33,9 +34,11 @@ def ProperlyClosed(incomingStr):
             if isCorrectCloser(stackOfOpeners.Peek(), item):
                 stackOfOpeners.Pop()
 
-    if stackOfOpeners.Count() is 0:
+    if stackOfOpeners.Peek() is None:
         return True
     else:
         return False
 
-print("Is your string properly closed, dude? Answer: " + str(ProperlyClosed(testStringInvalid)))
+print("Is your string properly closed, numbnuts? Answer: " + str(ProperlyClosed(testStringValid)))
+print("Is your string properly closed, numbnuts? Answer: " + str(ProperlyClosed(testStringInvalid)))
+print("Is your string properly closed, numbnuts? Answer: " + str(ProperlyClosed(testStringUneven)))

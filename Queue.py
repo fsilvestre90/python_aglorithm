@@ -15,6 +15,3 @@ class Queue(object):
 
     def Push(self, element):
         self.queue.append(element)
-
-    def Count(self):
-        return len(self.queue)
